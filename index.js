@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const dotenv = require('dotenv');
 const path = require('path');
 const clientesRouter = require('./routes/clientes');
@@ -8,6 +9,7 @@ const app = express();
 dotenv.config();
 
 // Middleware para manejar JSON y archivos estáticos
+app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
