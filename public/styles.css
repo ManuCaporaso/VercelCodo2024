@@ -1,7 +1,7 @@
 /* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
+    font-family: 'Arial', sans-serif;
+    background-image: url(./logo_fondo_transp.svg);
     color: #333; /* Color principal de texto */
     margin: 0;
     padding: 20px;
@@ -10,70 +10,124 @@ body {
     align-items: center;
 }
 
+/* Títulos */
 h1, h2 {
-    color: #444; /* Títulos en gris oscuro */
-    margin-bottom: 10px;
+    color: #333; /* Títulos en gris oscuro */
+    margin-bottom: 20px; /* Aumentar margen inferior */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
 }
 
+/* Botones */
 button {
-    padding: 10px 20px;
-    background-color: #555; /* Fondo gris oscuro para botones */
+    padding: 15px 30px; /* Aumentar padding */
+    background-color: #333; /* Fondo gris oscuro para botones */
     color: #fff; /* Texto blanco */
     border: none;
+    border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 10px; /* Agregar margen alrededor */
 }
 
 button:hover {
-    background-color: #777; /* Cambio de color al pasar el mouse */
+    background-color: #555; /* Cambio de color al pasar el mouse */
+    transform: scale(1.05);
 }
 
 form {
-    width: 300px;
-    margin-bottom: 20px;
-    padding: 20px;
-    background-color: #ddd; /* Fondo gris claro para formularios */
+    width: 360px; /* Aumentar ancho */
+    margin-bottom: 30px; /* Aumentar margen inferior */
+    padding: 30px; /* Aumentar padding */
+    background-color: #fff; /* Fondo blanco para formularios */
+    border: 1px solid #ccc;
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
+form:hover {
+    transform: translateY(-5px);
+}
+
+/* Etiquetas */
 label {
     display: block;
-    margin-bottom: 8px;
-    color: #666; /* Color gris para etiquetas */
+    margin-bottom: 10px; /* Aumentar margen inferior */
+    color: #555; /* Color gris para etiquetas */
+    font-weight: bold;
 }
 
+/* Campos de texto */
 input[type="email"],
 input[type="text"] {
     width: calc(100% - 20px);
-    padding: 8px;
-    margin-bottom: 10px;
+    padding: 12px; /* Aumentar padding */
+    margin-bottom: 15px; /* Aumentar margen inferior */
     border: 1px solid #ccc;
     border-radius: 4px;
+    transition: border-color 0.3s ease;
 }
 
-input[type="submit"] {
-    background-color: #555; /* Fondo gris oscuro para botones de envío */
+input[type="email"]:focus,
+input[type="text"]:focus {
+    border-color: #333; /* Color del borde al enfocar */
+}
+
+/* Botones de envío */
+input[type="submit"],
+button[type="submit"] {
+    background-color: #333; /* Fondo gris oscuro para botones de envío */
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 15px 30px; /* Aumentar padding */
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 4px;
+    margin-top: 10px; /* Agregar margen superior */
 }
 
-input[type="submit"]:hover {
-    background-color: #777; /* Cambio de color al pasar el mouse */
+input[type="submit"]:hover,
+button[type="submit"]:hover {
+    background-color: #555; /* Cambio de color al pasar el mouse */
+    transform: scale(1.05);
 }
 
+/* Lista de clientes */
 ul {
     list-style-type: none;
     padding: 0;
+    width: 360px; /* Aumentar ancho */
+    margin-top: 20px; /* Aumentar margen superior */
 }
 
 ul li {
     background-color: #eee; /* Fondo gris claro para elementos de lista */
-    padding: 10px;
-    margin-bottom: 5px;
+    padding: 15px; /* Aumentar padding */
+    margin-bottom: 10px; /* Aumentar margen inferior */
     border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Acciones en la lista */
+.actions button {
+    margin-left: 10px;
+    padding: 10px 20px; /* Aumentar padding */
+    background-color: #333; /* Fondo gris oscuro para botones */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.actions button:hover {
+    background-color: #555; /* Cambio de color al pasar el mouse */
+    transform: scale(1.05);
 }
 
 /* Animación para mostrar/ocultar formularios */

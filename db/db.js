@@ -1,5 +1,3 @@
-// db/db.js
-
 const mysql = require('mysql2');
 const dotenv = require('dotenv');
 
@@ -19,5 +17,6 @@ connection.connect((err) => {
     }
     console.log('Conectado exitosamente a la base de datos');
 });
+
 
 module.exports = connection;
