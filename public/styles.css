@@ -1,0 +1,82 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333; /* Color principal de texto */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1, h2 {
+    color: #444; /* Títulos en gris oscuro */
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #555; /* Fondo gris oscuro para botones */
+    color: #fff; /* Texto blanco */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #777; /* Cambio de color al pasar el mouse */
+}
+
+form {
+    width: 300px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #ddd; /* Fondo gris claro para formularios */
+    border-radius: 8px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #666; /* Color gris para etiquetas */
+}
+
+input[type="email"],
+input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #555; /* Fondo gris oscuro para botones de envío */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #777; /* Cambio de color al pasar el mouse */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #eee; /* Fondo gris claro para elementos de lista */
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+}
+
+/* Animación para mostrar/ocultar formularios */
+.hidden {
+    display: none;
+}
