@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             const result = await response.json();
-            alert(result.message);
+            alert('Cliente editado con éxito');
             editarClienteForm.reset();
             editarClienteForm.classList.add('hidden');
             listarClientes();
@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
 
                         const result = await response.json();
-                        alert(result.message);
+                        alert('Cliente eliminado con éxito');
                         listarClientes();
                     } catch (error) {
                         console.error('Error:', error);
