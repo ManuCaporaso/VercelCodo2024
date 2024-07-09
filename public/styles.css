@@ -1,7 +1,9 @@
 /* Estilos generales */
 body {
     font-family: 'Arial', sans-serif;
+    background-color: #b3b3b3;
     background-image: url(./logo_fondo_transp.svg);
+    background-size: contain;
     color: #333; /* Color principal de texto */
     margin: 0;
     padding: 20px;
@@ -12,7 +14,7 @@ body {
 
 /* Títulos */
 h1, h2 {
-    color: #333; /* Títulos en gris oscuro */
+    color: #ffffff; /* Títulos en gris oscuro */
     margin-bottom: 20px; /* Aumentar margen inferior */
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -37,7 +39,7 @@ button:hover {
 }
 
 form {
-    width: 360px; /* Aumentar ancho */
+    width: 500px; /* Aumentar ancho */
     margin-bottom: 30px; /* Aumentar margen inferior */
     padding: 30px; /* Aumentar padding */
     background-color: #fff; /* Fondo blanco para formularios */
@@ -98,7 +100,7 @@ button[type="submit"]:hover {
 ul {
     list-style-type: none;
     padding: 0;
-    width: 360px; /* Aumentar ancho */
+    width: 600px; /* Aumentar ancho */
     margin-top: 20px; /* Aumentar margen superior */
 }
 
@@ -107,9 +109,6 @@ ul li {
     padding: 15px; /* Aumentar padding */
     margin-bottom: 10px; /* Aumentar margen inferior */
     border-radius: 4px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -125,9 +124,20 @@ ul li {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.actions button:hover {
-    background-color: #555; /* Cambio de color al pasar el mouse */
-    transform: scale(1.05);
+.actions button.update {
+    background-color: #4caf50; /* Verde para actualizar */
+}
+
+.actions button.update:hover {
+    background-color: #388e3c; /* Verde más oscuro al pasar el mouse */
+}
+
+.actions button.delete {
+    background-color: #f44336; /* Rojo para eliminar */
+}
+
+.actions button.delete:hover {
+    background-color: #d32f2f; /* Rojo más oscuro al pasar el mouse */
 }
 
 /* Animación para mostrar/ocultar formularios */

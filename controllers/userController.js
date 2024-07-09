@@ -18,9 +18,9 @@ const obtenerClientePorcliente_Id = (req, res) => {
 };
 
 const crearCliente = (req, res) => {
-    const { email, nombre, telefono } = req.body;
-    const sql = 'INSERT INTO Clientes (email, nombre, telefono) VALUES (?, ?, ?)';
-    db.query(sql, [email, nombre, telefono], (err, result) => {
+    const { email, nombre, apellido, telefono, direccion, localidad } = req.body;
+    const sql = 'INSERT INTO Clientes (email, nombre, apellido, telefono, direccion, localidad) VALUES (?, ?, ?, ?, ?,?)';
+    db.query(sql, [email, nombre, apellido, telefono, direccion, localidad], (err, result) => {
         if (err) throw err;
         res.json({
             mensaje: 'Cliente Creado',
@@ -31,9 +31,9 @@ const crearCliente = (req, res) => {
 
 const actualizarCliente = (req, res) => {
     const { cliente_id } = req.params;
-    const { email, nombre, telefono } = req.body;
-    const sql = 'UPDATE Clientes SET email = ?, nombre = ?, telefono = ? WHERE cliente_id = ?';
-    db.query(sql, [email, nombre, telefono, cliente_id], (err, result) => {
+    const { email, nombre, apellido, telefono, direccion, localidad } = req.body;
+    const sql = 'UPDATE Clientes SET email = ?, nombre = ?, apellido = ?, telefono = ?, direccion = ?, localidad = ? WHERE cliente_id = ?';
+    db.query(sql, [email, nombre, apellido, telefono, direccion, localidad, cliente_id], (err, result) => {
         if (err) throw err;
         res.json({
             mensaje: 'Cliente actualizado'
